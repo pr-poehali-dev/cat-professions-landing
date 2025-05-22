@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,7 +15,7 @@ const HireSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-[#1A1A1A] text-white">
+    <section id="hire" className="py-16 px-4 bg-[#1A1A1A] text-white">
       <div className="container mx-auto max-w-xl">
         <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
           Хотите нанять <span className="text-[#D35536]">кота?</span>

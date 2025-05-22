@@ -1,12 +1,19 @@
-
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Coffee, Brush, Code, Briefcase, ChefHat, Camera, Stethoscope } from "lucide-react";
+import {
+  Coffee,
+  Brush,
+  Code,
+  Briefcase,
+  ChefHat,
+  Camera,
+  Stethoscope,
+} from "lucide-react";
 import CatProfession from "./CatProfession";
 
 /**
@@ -77,7 +84,7 @@ const ProfessionsSection = () => {
   return (
     <>
       {/* Mobile Carousel for Professions */}
-      <section className="py-16 px-4 bg-white md:hidden">
+      <section id="professions" className="py-16 px-4 bg-white md:hidden">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
             Наши <span className="text-[#D35536]">профессионалы</span>

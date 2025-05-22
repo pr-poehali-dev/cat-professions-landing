@@ -1,4 +1,3 @@
-
 import { podcasts } from "./podcasts/data";
 import PodcastCard from "./podcasts/PodcastCard";
 import PodcastPlatforms from "./podcasts/PodcastPlatforms";
@@ -8,7 +7,7 @@ import PodcastPlatforms from "./podcasts/PodcastPlatforms";
  */
 const PodcastSection = () => {
   return (
-    <section className="py-16 px-4 bg-[#1A1A1A] text-white">
+    <section id="podcasts" className="py-16 px-4 bg-[#1A1A1A] text-white">
       <div className="container mx-auto">
         <SectionHeader />
         <PodcastGrid />
@@ -27,8 +26,9 @@ const SectionHeader = () => (
       <span className="text-[#D35536]">МЯУ</span>скаст
     </h2>
     <p className="text-center mb-10 text-gray-400 max-w-2xl mx-auto">
-      Слушайте наши еженедельные подкасты, где профессиональные коты делятся секретами своего мастерства.
-      Внимание: подкасты содержат много мурчания и внезапных пауз на умывание.
+      Слушайте наши еженедельные подкасты, где профессиональные коты делятся
+      секретами своего мастерства. Внимание: подкасты содержат много мурчания и
+      внезапных пауз на умывание.
     </p>
   </>
 );
