@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 
 const CatTermsSection = () => {
   return (
-    <section className="py-16 px-4 bg-gray-900 text-white" id="cat-terms">
+    <section className="py-16 px-4 bg-[#F5EFE0]" id="cat-terms">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
+        <h2 className="text-3xl font-bold font-montserrat mb-3 text-center text-[#1A1A1A]">
           <span className="text-[#D35536]">Котонимы</span>: словарь терминов
         </h2>
-        <p className="text-center mb-10 text-gray-400 max-w-2xl mx-auto">
+        <p className="text-center mb-10 text-gray-600 max-w-2xl mx-auto">
           Выучите профессиональный язык наших котов, чтобы лучше их понимать.
           Важно: все термины произносятся с обязательным "мяу" в конце.
         </p>
@@ -71,15 +71,15 @@ interface TermCardProps {
 
 const TermCard = ({ category, term, definition, example }: TermCardProps) => {
   return (
-    <div className="bg-gray-800 p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+    <div className="bg-white p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
       <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
         {category}
       </span>
-      <h3 className="text-xl font-bold mb-2 text-white">{term}</h3>
-      <p className="text-gray-300">
+      <h3 className="text-xl font-bold mb-2 text-gray-900">{term}</h3>
+      <p className="text-gray-700">
         <span className="font-bold">Определение:</span> {definition}
       </p>
-      <div className="mt-3 text-sm text-gray-400">
+      <div className="mt-3 text-sm text-gray-500">
         <p>
           <span className="font-bold">Пример:</span> "{example}"
         </p>

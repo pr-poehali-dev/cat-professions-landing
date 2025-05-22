@@ -84,9 +84,9 @@ const ProfessionsSection = () => {
   return (
     <>
       {/* Mobile Carousel for Professions */}
-      <section className="py-16 px-4 bg-gray-900 md:hidden" id="professions">
+      <section className="py-16 px-4 bg-[#F5EFE0] md:hidden" id="professions">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold font-montserrat mb-10 text-center text-white">
+          <h2 className="text-3xl font-bold font-montserrat mb-10 text-center text-[#1A1A1A]">
             Наши <span className="text-[#D35536]">профессионалы</span>
           </h2>
 
@@ -106,11 +106,11 @@ const ProfessionsSection = () => {
 
       {/* Desktop Grid for Professions */}
       <section
-        className="py-16 px-4 bg-gray-900 hidden md:block"
+        className="py-16 px-4 bg-[#F5EFE0] hidden md:block"
         id="professions"
       >
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold font-montserrat mb-10 text-center text-white">
+          <h2 className="text-3xl font-bold font-montserrat mb-10 text-center text-[#1A1A1A]">
             Наши <span className="text-[#D35536]">профессионалы</span>
           </h2>
 
