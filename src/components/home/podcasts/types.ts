@@ -2,26 +2,24 @@
 import { LucideIcon } from "lucide-react";
 
 /**
- * Интерфейс для эпизода подкаста
+ * Типы для компонентов подкастов
  */
-export interface PodcastEpisode {
+
+export interface Episode {
   title: string;
   duration: string;
 }
 
-/**
- * Интерфейс для карточки подкаста
- */
 export interface PodcastCardProps {
   icon: LucideIcon;
-  gradientFrom: string;
-  gradientTo: string;
-  badge: string;
-  badgeColor: string;
   title: string;
   hosts: string;
   duration: string;
   listens: string;
-  imageUrl?: string;
-  episodes: PodcastEpisode[];
+  badge?: string;
+  badgeColor?: string;
+  gradientFrom: string;
+  gradientTo: string;
+  imageUrl: string;
+  episodes?: Episode[];
 }

@@ -4,6 +4,7 @@ import ProfessionsSection from "@/components/home/ProfessionsSection";
 import WhyCatsSection from "@/components/home/WhyCatsSection";
 import CatTermsSection from "@/components/home/CatTermsSection";
 import PodcastSection from "@/components/home/PodcastSection";
+import PetTheCat from "@/components/home/PetTheCat";
 import FaqSection from "@/components/home/FaqSection";
 import HireSection from "@/components/home/HireSection";
 import Footer from "@/components/home/Footer";
@@ -33,6 +34,9 @@ const Index = () => {
 
       {/* Podcasts Section */}
       <PodcastSection />
+
+      {/* Pet The Cat Interactive Section */}
+      <PetTheCat />
 
       {/* FAQ Section */}
       <FaqSection />
