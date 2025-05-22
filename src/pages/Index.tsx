@@ -212,6 +212,139 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Котонимы - Словарь профессиональных терминов */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
+            <span className="text-[#D35536]">Котонимы</span>: словарь терминов
+          </h2>
+          <p className="text-center mb-10 text-gray-600 max-w-2xl mx-auto">
+            Выучите профессиональный язык наших котов, чтобы лучше их понимать.
+            Важно: все термины произносятся с обязательным "мяу" в конце.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Бизнес
+              </span>
+              <h3 className="text-xl font-bold mb-2">Мурктинг</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Маркетинг, но с
+                обязательным мурчанием во время презентаций
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Наш мурктинг-план
+                  включает топтание по клавиатуре и случайную отправку писем"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                IT
+              </span>
+              <h3 className="text-xl font-bold mb-2">Кототайп</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Прототип,
+                созданный путем случайного хождения по клавиатуре
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Наш новый кототайп
+                  получился, когда Барсик заснул на клавиатуре"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Дизайн
+              </span>
+              <h3 className="text-xl font-bold mb-2">КотоШоп</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Фотошоп после
+                того, как кот прошелся по всем слоям
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Клиент не оценил
+                  мой КотоШоп и 46 случайных фильтров"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Кулинария
+              </span>
+              <h3 className="text-xl font-bold mb-2">Рыбоскоп</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Особый вид
+                кошачьей интуиции, позволяющий определить, где спрятана рыба
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Мой рыбоскоп
+                  показывает, что в холодильнике есть тунец"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Медицина
+              </span>
+              <h3 className="text-xl font-bold mb-2">Мурчетерапия</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Лечение всех
+                болезней путем мурчания на больное место
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "После сеанса
+                  мурчетерапии клиент наконец-то смог заснуть"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Фотография
+              </span>
+              <h3 className="text-xl font-bold mb-2">Лапофокус</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Эффект размытия,
+                возникающий, когда кот внезапно решает помочь с фотосессией
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Все 200 фотографий
+                  со свадьбы имеют профессиональный лапофокус"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button className="bg-[#D35536] hover:bg-[#B73D23]">
+              Загрузить больше котонимов
+            </Button>
+            <p className="mt-4 text-sm text-gray-500 italic">
+              * Все термины одобрены Международной Ассоциацией Профессиональных
+              Котов (МАПК)
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Hire a Cat Form */}
       <section className="py-16 px-4 bg-[#1A1A1A] text-white">
         <div className="container mx-auto max-w-xl">
