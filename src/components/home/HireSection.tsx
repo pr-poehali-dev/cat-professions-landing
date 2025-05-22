@@ -15,7 +15,7 @@ const HireSection = () => {
   };
 
   return (
-    <section id="hire" className="py-16 px-4 bg-[#1A1A1A] text-white">
+    <section className="py-16 px-4 bg-[#8B7E66] text-white">
       <div className="container mx-auto max-w-xl">
         <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
           Хотите нанять <span className="text-[#D35536]">кота?</span>
@@ -25,7 +25,7 @@ const HireSection = () => {
         </p>
 
         <div className="space-y-6">
-          <div className="p-6 bg-gray-800 rounded-lg border border-gray-700">
+          <div className="p-6 bg-[#9D8E76] rounded-lg border border-gray-700">
             <h3 className="text-xl font-bold mb-4 text-center">
               Докажите, что вы достойны быть нашим клиентом 💅🏻
             </h3>

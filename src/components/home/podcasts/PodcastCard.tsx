@@ -1,10 +1,12 @@
-import { Button } from "@/components/ui/button";
+
+import React, { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { PodcastCardProps } from "./types";
 
 /**
  * Компонент карточки подкаста
  */
-const PodcastCard = ({
+const PodcastCard: React.FC<PodcastCardProps> = ({
   icon: Icon,
   gradientFrom,
   gradientTo,
@@ -16,78 +18,69 @@ const PodcastCard = ({
   listens,
   imageUrl,
   episodes,
-}: PodcastCardProps) => {
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-      <div
-        className="relative h-48"
-        style={{
-          background: `linear-gradient(to right, ${gradientFrom}, ${gradientTo})`,
-        }}
-      >
-        {imageUrl && (
-          <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-            <img
-              src={imageUrl}
-              alt={title}
-              className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
-            />
-          </div>
-        )}
-        {!imageUrl && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <Icon className="w-16 h-16 text-white opacity-30" />
-          </div>
-        )}
-        <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+    <div className="bg-white rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg">
+      <div className="relative">
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-48 object-cover"
+        />
+        {badge && (
           <span
-            className="px-2 py-1 text-xs rounded-full"
+            className="absolute top-2 left-2 text-xs font-bold text-white px-2 py-1 rounded-full"
             style={{ backgroundColor: badgeColor }}
           >
             {badge}
           </span>
-          <h3 className="text-xl font-bold mt-2">{title}</h3>
-          <p className="text-sm text-gray-300">Ведущие: {hosts}</p>
-        </div>
+        )}
       </div>
 
-      <div className="p-4">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center">
-            <Button size="sm" variant="ghost" style={{ color: gradientFrom }}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-play"
-              >
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-              Слушать
-            </Button>
-            <span className="text-sm text-gray-400 ml-2">{duration}</span>
+      <div className="bg-[#8B7E66] text-white p-4">
+        <div className="flex items-center gap-2 mb-2">
+          <div
+            className="w-10 h-10 rounded-full flex items-center justify-center"
+            style={{
+              background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
+            }}
+          >
+            <Icon size={20} className="text-white" />
           </div>
-          <span className="text-xs text-gray-400">{listens} прослушиваний</span>
+          <div>
+            <h3 className="font-bold">{title}</h3>
+            <p className="text-xs text-gray-200">Ведущие: {hosts}</p>
+          </div>
         </div>
 
-        <h4 className="font-bold mb-2">Последние эпизоды:</h4>
-        <ul className="space-y-2 text-sm">
-          {episodes.map((episode, index) => (
-            <li
-              key={index}
-              className="p-2 hover:bg-gray-700 rounded-md flex justify-between items-center"
-            >
-              <span>"{episode.title}"</span>
-              <span className="text-xs text-gray-400">{episode.duration}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="flex justify-between text-sm mb-3">
+          <span>{duration}</span>
+          <span>{listens} прослушиваний</span>
+        </div>
+
+        <button
+          className="w-full flex items-center justify-between text-sm font-medium py-2 border-t border-white/20"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          <span>Последние выпуски</span>
+          {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+        </button>
+
+        {isExpanded && (
+          <div className="mt-2 space-y-2">
+            {episodes.map((episode, idx) => (
+              <div
+                key={idx}
+                className="bg-white/10 p-2 rounded flex justify-between text-sm"
+              >
+                <span className="truncate">{episode.title}</span>
+                <span className="flex-shrink-0 ml-2">{episode.duration}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

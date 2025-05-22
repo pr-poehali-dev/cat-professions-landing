@@ -7,7 +7,7 @@ import PodcastPlatforms from "./podcasts/PodcastPlatforms";
  */
 const PodcastSection = () => {
   return (
-    <section id="podcasts" className="py-16 px-4 bg-[#1A1A1A] text-white">
+    <section id="podcasts" className="py-16 px-4 bg-[#8B7E66] text-white">
       <div className="container mx-auto">
         <SectionHeader />
         <PodcastGrid />
