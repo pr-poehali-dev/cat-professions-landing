@@ -122,133 +122,303 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#F5F0E1] font-rubik">
       {/* Hero Section */}
-      ... keep existing code ...
-      {/* Котомендации - отзывы от предметов */}
-      <section className="py-16 px-4 bg-[#F5F0E1]">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
-            <span className="text-[#D35536]">Котомендации</span>
-          </h2>
-          <p className="text-center mb-10 text-gray-600 max-w-2xl mx-auto">
-            Наши клиенты всегда довольны. Ну, почти всегда. Вот что говорят о
-            нас те, кто работал с нашими экспертами.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Review 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md relative">
-              <div className="flex items-center mb-4">
-                <div className="w-16 h-16 bg-[#1A1A1A] rounded-full flex items-center justify-center text-white text-2xl overflow-hidden">
-                  <img
-                    src="https://cdn.poehali.dev/files/85a4343c-cd5e-40b6-90b7-c72ab22b75e1.png"
-                    alt="Диван"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-bold">Диван Честерфилд</h3>
-                  <p className="text-xs text-gray-500">
-                    Работал с Котом-Дизайнером
-                  </p>
-                </div>
-                <div className="ml-auto">
-                  <div className="flex text-[#D35536]">
-                    <span>★</span>
-                    <span>★</span>
-                    <span>★</span>
-                    <span>★</span>
-                    <span className="text-gray-300">★</span>
-                  </div>
-                </div>
-              </div>
-              <p className="italic text-gray-600">
-                "До работы с котом-дизайнером я был просто диваном. Теперь я -
-                модный арт-объект с художественно размещенной шерстью и
-                креативными царапинами. Правда, теперь я принадлежу коту, а не
-                хозяину дома."
-              </p>
-              <div className="mt-4 text-xs text-gray-400 text-right">
-                5 месяцев назад
-              </div>
-            </div>
-            {/* Review 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md relative">
-              <div className="flex items-center mb-4">
-                <div className="w-16 h-16 bg-[#1A1A1A] rounded-full flex items-center justify-center text-white text-2xl overflow-hidden">
-                  <img
-                    src="https://cdn.poehali.dev/files/6c94bb18-5dfc-4cf2-8f34-9f5266bbc53b.png"
-                    alt="Клавиатура"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-bold">Клавиатура Мэханикал</h3>
-                  <p className="text-xs text-gray-500">
-                    Работала с Котом-Программистом
-                  </p>
-                </div>
-                <div className="ml-auto">
-                  <div className="flex text-[#D35536]">
-                    <span>★</span>
-                    <span>★</span>
-                    <span className="text-gray-300">★</span>
-                    <span className="text-gray-300">★</span>
-                    <span className="text-gray-300">★</span>
-                  </div>
-                </div>
-              </div>
-              <p className="italic text-gray-600">
-                "asdfghjkl;lkjasdfghhhhhhhhhhhhhhhhhhh7777777777
-                zzzzzzzzzzzzzzzzz. Простите, это кот. Я хотела сказать, что
-                теперь в моих кнопках достаточно шерсти, чтобы сделать еще
-                одного кота. Не рекомендую!"
-              </p>
-              <div className="mt-4 text-xs text-gray-400 text-right">
-                2 недели назад
-              </div>
-            </div>
-            {/* Review 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md relative">
-              <div className="flex items-center mb-4">
-                <div className="w-16 h-16 bg-[#1A1A1A] rounded-full flex items-center justify-center text-white text-2xl overflow-hidden">
-                  <img
-                    src="https://cdn.poehali.dev/files/adc5c7a5-57c8-444e-b13a-50c70f89b14b.png"
-                    alt="Штора"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-bold">Штора Тюлевая</h3>
-                  <p className="text-xs text-gray-500">
-                    Работала с Котом-Акробатом
-                  </p>
-                </div>
-                <div className="ml-auto">
-                  <div className="flex text-[#D35536]">
-                    <span>★</span>
-                    <span className="text-gray-300">★</span>
-                    <span className="text-gray-300">★</span>
-                    <span className="text-gray-300">★</span>
-                    <span className="text-gray-300">★</span>
-                  </div>
-                </div>
-              </div>
-              <p className="italic text-gray-600">
-                "Я думала, что буду красиво обрамлять окно. Теперь я — тренажер
-                для кошачьего альпинизма. За последний месяц кот превратил меня
-                из шторы в бахрому. Скоро меня заменят жалюзи."
-              </p>
-              <div className="mt-4 text-xs text-gray-400 text-right">Вчера</div>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <Button className="bg-[#D35536] hover:bg-[#B73D23]">
-              Смотреть все 238 котомендаций
+      <section className="relative overflow-hidden bg-[#1A1A1A] text-white">
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute inset-0 bg-[url('https://i.imgur.com/XQKCxPV.jpg')] bg-repeat opacity-10"></div>
+        </div>
+        <div className="container mx-auto px-4 py-24 relative z-10">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-6xl font-bold font-montserrat mb-6">
+              КотоПрофи<span className="text-[#D35536]">.</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-300">
+              Мы не просто милые создания. Мы - профессионалы своего дела.
+              <br />
+              <span className="italic text-[#D35536]">Мяу.</span>
+            </p>
+            <Button className="bg-[#D35536] hover:bg-[#B73D23] text-white">
+              Познакомиться с нашими котами
             </Button>
           </div>
         </div>
+        <div className="absolute bottom-0 right-0 w-full md:w-1/2 h-24 md:h-32 bg-[#D35536] opacity-75 transform -skew-x-12 translate-x-16"></div>
       </section>
-      {/* МЯУскаст - подкасты от котов */}
-      ... keep existing code ...
+
+      {/* Mobile Carousel for Professions */}
+      <section className="py-16 px-4 bg-white md:hidden">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
+            Наши <span className="text-[#D35536]">профессионалы</span>
+          </h2>
+
+          <Carousel className="w-full">
+            <CarouselContent>
+              {catProfessions.map((profession, index) => (
+                <CarouselItem key={index}>
+                  <CatProfession {...profession} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+      </section>
+
+      {/* Desktop Grid for Professions */}
+      <section className="py-16 px-4 bg-white hidden md:block">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
+            Наши <span className="text-[#D35536]">профессионалы</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {catProfessions.map((profession, index) => (
+              <CatProfession key={index} {...profession} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Cats Section */}
+      <section className="py-16 px-4 bg-[#F5F0E1]">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
+            Почему коты -{" "}
+            <span className="text-[#D35536]">лучшие работники</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3">Всегда на месте</h3>
+              <p>Мы не уходим с рабочего места. Потому что там удобно спать.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3">Многозадачность</h3>
+              <p>Можем одновременно спать, игнорировать вас и думать о еде.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3">Строгий режим</h3>
+              <p>
+                Никогда не забудем напомнить, что пора есть. В 5 утра. Каждый
+                день.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-3">Креативность</h3>
+              <p>Находим новые способы сбрасывать вещи со стола каждый день.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Котонимы - Словарь профессиональных терминов */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
+            <span className="text-[#D35536]">Котонимы</span>: словарь терминов
+          </h2>
+          <p className="text-center mb-10 text-gray-600 max-w-2xl mx-auto">
+            Выучите профессиональный язык наших котов, чтобы лучше их понимать.
+            Важно: все термины произносятся с обязательным "мяу" в конце.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Бизнес
+              </span>
+              <h3 className="text-xl font-bold mb-2">Мурктинг</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Маркетинг, но с
+                обязательным мурчанием во время презентаций
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Наш мурктинг-план
+                  включает топтание по клавиатуре и случайную отправку писем"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                IT
+              </span>
+              <h3 className="text-xl font-bold mb-2">Кототайп</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Прототип,
+                созданный путем случайного хождения по клавиатуре
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Наш новый кототайп
+                  получился, когда Барсик заснул на клавиатуре"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Дизайн
+              </span>
+              <h3 className="text-xl font-bold mb-2">КотоШоп</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Фотошоп после
+                того, как кот прошелся по всем слоям
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Клиент не оценил
+                  мой КотоШоп и 46 случайных фильтров"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Кулинария
+              </span>
+              <h3 className="text-xl font-bold mb-2">Рыбоскоп</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Особый вид
+                кошачьей интуиции, позволяющий определить, где спрятана рыба
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Мой рыбоскоп
+                  показывает, что в холодильнике есть тунец"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Медицина
+              </span>
+              <h3 className="text-xl font-bold mb-2">Мурчетерапия</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Лечение всех
+                болезней путем мурчания на больное место
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "После сеанса
+                  мурчетерапии клиент наконец-то смог заснуть"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+
+            <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+                Фотография
+              </span>
+              <h3 className="text-xl font-bold mb-2">Лапофокус</h3>
+              <p className="text-gray-700">
+                <span className="font-bold">Определение:</span> Эффект размытия,
+                возникающий, когда кот внезапно решает помочь с фотосессией
+              </p>
+              <div className="mt-3 text-sm text-gray-500">
+                <p>
+                  <span className="font-bold">Пример:</span> "Все 200 фотографий
+                  со свадьбы имеют профессиональный лапофокус"
+                </p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button className="bg-[#D35536] hover:bg-[#B73D23]">
+              Загрузить больше котонимов
+            </Button>
+            <p className="mt-4 text-sm text-gray-500 italic">
+              * Все термины одобрены Международной Ассоциацией Профессиональных
+              Котов (МАПК)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Hire a Cat Form */}
+      <section className="py-16 px-4 bg-[#1A1A1A] text-white">
+        <div className="container mx-auto max-w-xl">
+          <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
+            Хотите нанять <span className="text-[#D35536]">кота?</span>
+          </h2>
+          <p className="text-center mb-8 text-gray-400">
+            Заполните форму, и мы свяжемся с вами, когда проснемся
+          </p>
+
+          <div className="space-y-6">
+            <div className="p-6 bg-gray-800 rounded-lg border border-gray-700">
+              <h3 className="text-xl font-bold mb-4 text-center">
+                Докажите, что вы достойны быть нашим клиентом 💅🏻
+              </h3>
+
+              <Textarea
+                placeholder="Расскажите, почему кот должен обратить на вас внимание..."
+                className="bg-gray-700 border-gray-600 mb-4"
+                rows={4}
+              />
+
+              <div className="flex justify-center mt-6">
+                <Button
+                  className="bg-[#D35536] hover:bg-[#B73D23] w-full"
+                  onClick={() => setFormSubmitted(!formSubmitted)}
+                >
+                  {formSubmitted
+                    ? "Мяу! Рассмотрим вашу кандидатуру"
+                    : "Отправить на рассмотрение"}
+                </Button>
+              </div>
+
+              <div className="mt-8 flex justify-center">
+                <div className="max-w-xs">
+                  <img
+                    src="https://cdn.poehali.dev/files/3b9cfecd-4975-4f1f-b926-623b85824d37.png"
+                    alt="Кот рассматривает заявки"
+                    className="rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
+
+              <p className="text-xs text-center text-gray-500 mt-4">
+                * Коты очень избирательны. Мы не гарантируем, что ваша заявка
+                будет рассмотрена.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#F5F0E1] py-6 px-4">
+        <div className="container mx-auto text-center">
+          <p className="text-sm text-gray-600">
+            © 2025 КотоПрофи · Все права защищены · Оплата только кошачьим
+            кормом
+          </p>
+          <div className="flex justify-center mt-4 space-x-4">
+            <a href="#" className="text-gray-600 hover:text-[#D35536]">
+              Политика конфиденциальности
+            </a>
+            <span className="text-gray-600">·</span>
+            <a href="#" className="text-gray-600 hover:text-[#D35536]">
+              Условия использования
+            </a>
+            <span className="text-gray-600">·</span>
+            <a href="#" className="text-gray-600 hover:text-[#D35536]">
+              Контакты
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
