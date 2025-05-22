@@ -84,8 +84,12 @@ const FaqSection = () => {
               </div>
               {item.isOpen && (
                 <div className="p-4 bg-white">
-                  <p className="italic text-gray-600 mb-2">"{item.answer}"</p>
-                  <p className="text-sm text-gray-500">— {item.author}</p>
+                  <p className="italic text-gray-600 mb-2 text-left">
+                    "{item.answer}"
+                  </p>
+                  <p className="text-sm text-gray-500 text-left">
+                    — {item.author}
+                  </p>
                 </div>
               )}
             </div>
@@ -93,11 +97,8 @@ const FaqSection = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <Button className="bg-[#D35536] hover:bg-[#B73D23]">
-            Задать свой вопрос
-          </Button>
-          <p className="mt-2 text-xs text-gray-500">
-            Ответ гарантирован в течение 2-3 бизнес-дремот
+          <p className="text-xs text-gray-500">
+            Ответы генерируются в течение 2-3 бизнес-дремот
           </p>
         </div>
       </div>
