@@ -1,27 +1,35 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { 
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Coffee, Brush, Code, Briefcase, ChefHat, Camera, Stethoscope, User } from "lucide-react";
+import {
+  Coffee,
+  Brush,
+  Code,
+  Briefcase,
+  ChefHat,
+  Camera,
+  Stethoscope,
+  User,
+} from "lucide-react";
 
-const CatProfession = ({ 
-  icon: Icon, 
-  title, 
-  description, 
-  imageUrl 
-}: { 
-  icon: any; 
-  title: string; 
-  description: string; 
+const CatProfession = ({
+  icon: Icon,
+  title,
+  description,
+  imageUrl,
+}: {
+  icon: any;
+  title: string;
+  description: string;
   imageUrl: string;
 }) => {
   return (
@@ -57,44 +65,57 @@ const Index = () => {
     {
       icon: Coffee,
       title: "Котэ-Бариста",
-      description: "Дизайн дизайном, а кушац по расписанию. Пончики и кофе - наша специальность!",
-      imageUrl: "https://cdn.poehali.dev/files/e7ddc298-3324-4230-80c0-7bfead6bd9e7.png"
+      description:
+        "Дизайн дизайном, а кушац по расписанию. Пончики и кофе - наша специальность!",
+      imageUrl:
+        "https://cdn.poehali.dev/files/e7ddc298-3324-4230-80c0-7bfead6bd9e7.png",
     },
     {
       icon: Code,
       title: "Кот-Программист",
-      description: "Делаем код, который работает... иногда. Спим на клавиатуре для повышения производительности.",
-      imageUrl: "https://i.imgur.com/P0KLjsE.jpg"
+      description:
+        "Делаем код, который работает... иногда. Спим на клавиатуре для повышения производительности.",
+      imageUrl: "https://i.imgur.com/P0KLjsE.jpg",
     },
     {
       icon: Brush,
       title: "Кот-Дизайнер",
-      description: "Все, что я делаю - копирую. Как еще мне учиться? Вдохновение берем из коробок.",
-      imageUrl: "https://cdn.poehali.dev/files/6e41657f-0d26-4ced-a0fa-65ce9894fbf5.png"
+      description:
+        "Все, что я делаю - копирую. Как еще мне учиться? Вдохновение берем из коробок.",
+      imageUrl:
+        "https://cdn.poehali.dev/files/6e41657f-0d26-4ced-a0fa-65ce9894fbf5.png",
     },
     {
       icon: Briefcase,
       title: "Бизнес-Кот",
-      description: "Мастер переговоров и ночных пробежек по квартире. Инвестируем в кошачий корм и игрушки.",
-      imageUrl: "https://i.imgur.com/YRD2VmK.jpg"
+      description:
+        "Мастер переговоров и ночных пробежек по квартире. Инвестируем в кошачий корм и игрушки.",
+      imageUrl:
+        "https://cdn.poehali.dev/files/36a26caf-8f2c-4f56-860d-c58f4a97cc44.png",
     },
     {
       icon: ChefHat,
       title: "Кот-Шеф",
-      description: "Специализируемся на блюдах из рыбы. Главное правило - сначала пробую я, потом гости.",
-      imageUrl: "https://i.imgur.com/lFG2o04.jpg"
+      description:
+        "Специализируемся на блюдах из рыбы. Главное правило - сначала пробую я, потом гости.",
+      imageUrl:
+        "https://cdn.poehali.dev/files/38e1edae-2c03-486a-b0f7-b4493d15353f.png",
     },
     {
       icon: Camera,
       title: "Кот-Фотограф",
-      description: "Лучшие ракурсы - с высоты холодильника. Портфолио состоит из селфи и случайных лап в кадре.",
-      imageUrl: "https://i.imgur.com/1lqITqn.jpg"
+      description:
+        "Лучшие ракурсы - с высоты холодильника. Портфолио состоит из селфи и случайных лап в кадре.",
+      imageUrl:
+        "https://cdn.poehali.dev/files/abf974eb-e012-422a-a3bf-f30182fff5d4.png",
     },
     {
       icon: Stethoscope,
       title: "Кот-Доктор",
-      description: "Лечим мурчанием и топтанием. Дополнительная услуга - ночное наблюдение у кровати.",
-      imageUrl: "https://i.imgur.com/DRELX3i.jpg"
+      description:
+        "Лечим мурчанием и топтанием. Дополнительная услуга - ночное наблюдение у кровати.",
+      imageUrl:
+        "https://cdn.poehali.dev/files/03e06680-2c73-46d7-aa73-cf2f00231110.png",
     },
   ];
 
@@ -129,7 +150,7 @@ const Index = () => {
           <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
             Наши <span className="text-[#D35536]">профессионалы</span>
           </h2>
-          
+
           <Carousel className="w-full">
             <CarouselContent>
               {catProfessions.map((profession, index) => (
@@ -150,7 +171,7 @@ const Index = () => {
           <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
             Наши <span className="text-[#D35536]">профессионалы</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {catProfessions.map((profession, index) => (
               <CatProfession key={index} {...profession} />
@@ -163,9 +184,10 @@ const Index = () => {
       <section className="py-16 px-4 bg-[#F5F0E1]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
-            Почему коты - <span className="text-[#D35536]">лучшие работники</span>
+            Почему коты -{" "}
+            <span className="text-[#D35536]">лучшие работники</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-3">Всегда на месте</h3>
@@ -177,7 +199,10 @@ const Index = () => {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-3">Строгий режим</h3>
-              <p>Никогда не забудем напомнить, что пора есть. В 5 утра. Каждый день.</p>
+              <p>
+                Никогда не забудем напомнить, что пора есть. В 5 утра. Каждый
+                день.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-3">Креативность</h3>
@@ -196,22 +221,26 @@ const Index = () => {
           <p className="text-center mb-8 text-gray-400">
             Заполните форму, и мы свяжемся с вами, когда проснемся
           </p>
-          
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="name" className="block mb-2 text-sm">Ваше имя</label>
-                <Input 
-                  id="name" 
+                <label htmlFor="name" className="block mb-2 text-sm">
+                  Ваше имя
+                </label>
+                <Input
+                  id="name"
                   placeholder="Как вас зовут?"
                   className="bg-gray-800 border-gray-700"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block mb-2 text-sm">Email</label>
-                <Input 
-                  id="email" 
+                <label htmlFor="email" className="block mb-2 text-sm">
+                  Email
+                </label>
+                <Input
+                  id="email"
                   type="email"
                   placeholder="Ваш email"
                   className="bg-gray-800 border-gray-700"
@@ -219,10 +248,12 @@ const Index = () => {
                 />
               </div>
             </div>
-            
+
             <div>
-              <label htmlFor="profession" className="block mb-2 text-sm">Какой кот вам нужен?</label>
-              <select 
+              <label htmlFor="profession" className="block mb-2 text-sm">
+                Какой кот вам нужен?
+              </label>
+              <select
                 id="profession"
                 className="w-full p-2 rounded-md bg-gray-800 border border-gray-700"
                 required
@@ -235,24 +266,26 @@ const Index = () => {
                 ))}
               </select>
             </div>
-            
+
             <div>
-              <label htmlFor="message" className="block mb-2 text-sm">Сообщение для кота</label>
-              <Textarea 
-                id="message" 
+              <label htmlFor="message" className="block mb-2 text-sm">
+                Сообщение для кота
+              </label>
+              <Textarea
+                id="message"
                 placeholder="Опишите, чем будет заниматься кот..."
                 className="bg-gray-800 border-gray-700"
                 rows={4}
               />
             </div>
-            
-            <Button 
-              type="submit" 
+
+            <Button
+              type="submit"
               className="w-full bg-[#D35536] hover:bg-[#B73D23]"
             >
               {formSubmitted ? "Мяу! Форма отправлена" : "Нанять кота"}
             </Button>
-            
+
             <p className="text-xs text-center text-gray-500 mt-4">
               * Все коты работают на фрилансе и приходят когда хотят
             </p>
@@ -264,7 +297,8 @@ const Index = () => {
       <footer className="bg-[#F5F0E1] py-6 px-4">
         <div className="container mx-auto text-center">
           <p className="text-sm text-gray-600">
-            © 2025 КотоПрофи · Все права защищены · Оплата только кошачьим кормом
+            © 2025 КотоПрофи · Все права защищены · Оплата только кошачьим
+            кормом
           </p>
           <div className="flex justify-center mt-4 space-x-4">
             <a href="#" className="text-gray-600 hover:text-[#D35536]">
