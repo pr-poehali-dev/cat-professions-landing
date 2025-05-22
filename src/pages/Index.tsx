@@ -222,74 +222,45 @@ const Index = () => {
             Заполните форму, и мы свяжемся с вами, когда проснемся
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="name" className="block mb-2 text-sm">
-                  Ваше имя
-                </label>
-                <Input
-                  id="name"
-                  placeholder="Как вас зовут?"
-                  className="bg-gray-800 border-gray-700"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block mb-2 text-sm">
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="Ваш email"
-                  className="bg-gray-800 border-gray-700"
-                  required
-                />
-              </div>
-            </div>
+          <div className="space-y-6">
+            <div className="p-6 bg-gray-800 rounded-lg border border-gray-700">
+              <h3 className="text-xl font-bold mb-4 text-center">
+                Докажите, что вы достойны быть нашим клиентом 💅🏻
+              </h3>
 
-            <div>
-              <label htmlFor="profession" className="block mb-2 text-sm">
-                Какой кот вам нужен?
-              </label>
-              <select
-                id="profession"
-                className="w-full p-2 rounded-md bg-gray-800 border border-gray-700"
-                required
-              >
-                <option value="">Выберите профессию</option>
-                {catProfessions.map((profession, index) => (
-                  <option key={index} value={profession.title}>
-                    {profession.title}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block mb-2 text-sm">
-                Сообщение для кота
-              </label>
               <Textarea
-                id="message"
-                placeholder="Опишите, чем будет заниматься кот..."
-                className="bg-gray-800 border-gray-700"
+                placeholder="Расскажите, почему кот должен обратить на вас внимание..."
+                className="bg-gray-700 border-gray-600 mb-4"
                 rows={4}
               />
+
+              <div className="flex justify-center mt-6">
+                <Button
+                  className="bg-[#D35536] hover:bg-[#B73D23] w-full"
+                  onClick={() => setFormSubmitted(!formSubmitted)}
+                >
+                  {formSubmitted
+                    ? "Мяу! Рассмотрим вашу кандидатуру"
+                    : "Отправить на рассмотрение"}
+                </Button>
+              </div>
+
+              <div className="mt-8 flex justify-center">
+                <div className="max-w-xs">
+                  <img
+                    src="https://cdn.poehali.dev/files/3b9cfecd-4975-4f1f-b926-623b85824d37.png"
+                    alt="Кот рассматривает заявки"
+                    className="rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
+
+              <p className="text-xs text-center text-gray-500 mt-4">
+                * Коты очень избирательны. Мы не гарантируем, что ваша заявка
+                будет рассмотрена.
+              </p>
             </div>
-
-            <Button
-              type="submit"
-              className="w-full bg-[#D35536] hover:bg-[#B73D23]"
-            >
-              {formSubmitted ? "Мяу! Форма отправлена" : "Нанять кота"}
-            </Button>
-
-            <p className="text-xs text-center text-gray-500 mt-4">
-              * Все коты работают на фрилансе и приходят когда хотят
-            </p>
-          </form>
+          </div>
         </div>
       </section>
 
