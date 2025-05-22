@@ -25,14 +25,14 @@ const HireSection = () => {
         </p>
 
         <div className="space-y-6">
-          <div className="p-6 bg-[#5D4A38] rounded-lg border border-gray-700">
+          <div className="p-6 bg-[#252525] rounded-lg border border-gray-700">
             <h3 className="text-xl font-bold mb-4 text-center">
               Докажите, что вы достойны быть нашим клиентом 💅🏻
             </h3>
 
             <Textarea
               placeholder="Расскажите, почему кот должен обратить на вас внимание..."
-              className="bg-[#3A2E20] border-gray-600 mb-4"
+              className="bg-[#1E1E1E] border-gray-600 mb-4"
               rows={4}
             />
 
