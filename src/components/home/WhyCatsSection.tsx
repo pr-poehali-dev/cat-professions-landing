@@ -3,7 +3,7 @@
  */
 const WhyCatsSection = () => {
   return (
-    <section id="why-cats" className="py-16 px-4 bg-[#121212] text-white">
+    <section id="why-cats" className="py-16 px-4 bg-[#1A1A1A] text-white">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold font-montserrat mb-10 text-center">
           Почему коты - <span className="text-[#D35536]">лучшие работники</span>
