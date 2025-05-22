@@ -27,7 +27,7 @@ const FaqSection = () => {
     {
       question: "Что включено в стоимость услуг?",
       answer:
-        "Всё и ничего одновременно. Вы платите за присутствие кота. Будет ли от этого какая-то польза — это уже философский вопрос. Кстати, филе тунца не включено в базовый тариф, но настоятельно рекомендуется как дополнительная опцию.",
+        "Всё и ничего одновременно. Вы платите за присутствие кота. Будет ли от этого какая-то польза — это уже философский вопрос. Кстати, филе тунца не включено в базовый тариф, но настоятельно рекомендуется как дополнительная опция.",
       author: "Мурзик, Финансовый директор",
       isOpen: false,
     },
@@ -57,7 +57,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section id="faq" className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 bg-white text-black" id="faq">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
           <span className="text-[#D35536]">Котоленький</span> FAQ
@@ -74,22 +74,18 @@ const FaqSection = () => {
               className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
             >
               <div
-                className="p-4 bg-[#F5F0E1] flex items-center justify-between cursor-pointer"
+                className="p-4 bg-[#F5F2E8] flex items-center justify-between cursor-pointer"
                 onClick={() => toggleFaq(index)}
               >
-                <h3 className="font-bold">{item.question}</h3>
+                <h3 className="font-bold text-gray-900">{item.question}</h3>
                 <span className="text-[#D35536]">
-                  {item.isOpen ? "▲" : "▼"}
+                  {item.isOpen ? "▼" : "▲"}
                 </span>
               </div>
               {item.isOpen && (
-                <div className="p-4 bg-white">
-                  <p className="italic text-gray-600 mb-2 text-left">
-                    "{item.answer}"
-                  </p>
-                  <p className="text-sm text-gray-500 text-left">
-                    — {item.author}
-                  </p>
+                <div className="p-4 bg-white border-t border-gray-200">
+                  <p className="italic text-gray-700 mb-2">"{item.answer}"</p>
+                  <p className="text-sm text-gray-500">— {item.author}</p>
                 </div>
               )}
             </div>
@@ -97,8 +93,8 @@ const FaqSection = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-xs text-gray-500">
-            Ответы генерируются в течение 2-3 бизнес-дремот
+          <p className="text-sm text-gray-500">
+            Ответ гарантирован в течение 2-3 бизнес-дремот
           </p>
         </div>
       </div>

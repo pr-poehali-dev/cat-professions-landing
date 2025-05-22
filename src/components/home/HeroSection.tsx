@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-[#121212] text-white"
+      className="relative overflow-hidden bg-[#121212] text-white pt-8"
       id="hero"
     >
       <div className="absolute inset-0 opacity-15">
