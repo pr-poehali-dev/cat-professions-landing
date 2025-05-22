@@ -4,10 +4,10 @@ import ProfessionsSection from "@/components/home/ProfessionsSection";
 import WhyCatsSection from "@/components/home/WhyCatsSection";
 import CatTermsSection from "@/components/home/CatTermsSection";
 import PodcastSection from "@/components/home/PodcastSection";
-import PetTheCat from "@/components/home/PetTheCat";
 import FaqSection from "@/components/home/FaqSection";
 import HireSection from "@/components/home/HireSection";
 import Footer from "@/components/home/Footer";
+import PetTheCat from "@/components/home/PetTheCat";
 
 /**
  * Главная страница сайта
@@ -35,7 +35,7 @@ const Index = () => {
       {/* Podcasts Section */}
       <PodcastSection />
 
-      {/* Pet The Cat Interactive Section */}
+      {/* Pet The Cat Section */}
       <PetTheCat />
 
       {/* FAQ Section */}
