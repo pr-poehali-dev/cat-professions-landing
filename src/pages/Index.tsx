@@ -1,4 +1,3 @@
-import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
 import ProfessionsSection from "@/components/home/ProfessionsSection";
 import WhyCatsSection from "@/components/home/WhyCatsSection";
@@ -13,10 +12,7 @@ import Footer from "@/components/home/Footer";
  */
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#F5F0E1] font-rubik">
-      {/* Header with Navigation */}
-      <Header />
-
+    <div className="min-h-screen bg-[#121212] font-rubik text-white">
       {/* Hero Section */}
       <HeroSection />
 

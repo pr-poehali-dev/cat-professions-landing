@@ -1,5 +1,3 @@
-
-import { Card, CardContent } from "@/components/ui/card";
 import { LucideIcon } from "lucide-react";
 
 interface CatProfessionProps {
@@ -9,9 +7,6 @@ interface CatProfessionProps {
   imageUrl: string;
 }
 
-/**
- * Компонент карточки профессии кота
- */
 const CatProfession = ({
   icon: Icon,
   title,
@@ -19,22 +14,24 @@ const CatProfession = ({
   imageUrl,
 }: CatProfessionProps) => {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-      <div className="h-64 overflow-hidden relative">
+    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
+      <div className="h-56 overflow-hidden">
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute top-3 right-3 bg-primary text-primary-foreground p-2 rounded-full">
-          <Icon className="h-5 w-5" />
-        </div>
       </div>
-      <CardContent className="p-5">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
-      </CardContent>
-    </Card>
+      <div className="p-6">
+        <div className="flex items-center mb-3">
+          <div className="p-2 bg-[#D35536] rounded-full mr-3">
+            <Icon className="h-6 w-6 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white">{title}</h3>
+        </div>
+        <p className="text-gray-300">{description}</p>
+      </div>
+    </div>
   );
 };
 

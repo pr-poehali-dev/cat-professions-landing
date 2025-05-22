@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section
+      className="relative overflow-hidden bg-[#121212] text-white"
       id="hero"
-      className="relative overflow-hidden bg-[#1A1A1A] text-white"
     >
       <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0 bg-[url('https://i.imgur.com/XQKCxPV.jpg')] bg-repeat opacity-10"></div>
       </div>
-      <div className="container mx-auto px-4 py-24 relative z-10 pt-28">
+      <div className="container mx-auto px-4 py-24 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold font-montserrat mb-6">
             КотоПрофи<span className="text-[#D35536]">.</span>
