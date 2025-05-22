@@ -1,6 +1,9 @@
 
 import { Button } from "@/components/ui/button";
 
+/**
+ * Герой-секция главной страницы
+ */
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-[#1A1A1A] text-white">

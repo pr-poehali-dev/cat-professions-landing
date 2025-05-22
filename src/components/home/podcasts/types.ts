@@ -1,12 +1,18 @@
 
 import { LucideIcon } from "lucide-react";
 
+/**
+ * Интерфейс для эпизода подкаста
+ */
 export interface PodcastEpisode {
   title: string;
   duration: string;
 }
 
-export interface Podcast {
+/**
+ * Интерфейс для карточки подкаста
+ */
+export interface PodcastCardProps {
   icon: LucideIcon;
   gradientFrom: string;
   gradientTo: string;
@@ -18,8 +24,4 @@ export interface Podcast {
   listens: string;
   imageUrl?: string;
   episodes: PodcastEpisode[];
-}
-
-export interface PodcastCardProps extends Podcast {
-  // Дополнительные пропсы для карточки, если потребуются
 }

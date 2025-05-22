@@ -1,73 +1,79 @@
 
-import { Coffee, Code, Brush, Briefcase, ChefHat, Camera, Stethoscope } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
 } from "@/components/ui/carousel";
+import { Coffee, Brush, Code, Briefcase, ChefHat, Camera, Stethoscope } from "lucide-react";
 import CatProfession from "./CatProfession";
 
-const ProfessionsSection = () => {
-  const catProfessions = [
-    {
-      icon: Coffee,
-      title: "Котэ-Бариста",
-      description:
-        "Дизайн дизайном, а кушац по расписанию. Пончики и кофе - наша специальность!",
-      imageUrl:
-        "https://cdn.poehali.dev/files/e7ddc298-3324-4230-80c0-7bfead6bd9e7.png",
-    },
-    {
-      icon: Code,
-      title: "Кот-Программист",
-      description:
-        "Делаем код, который работает... иногда. Спим на клавиатуре для повышения производительности.",
-      imageUrl: "https://i.imgur.com/P0KLjsE.jpg",
-    },
-    {
-      icon: Brush,
-      title: "Кот-Дизайнер",
-      description:
-        "Все, что я делаю - копирую. Как еще мне учиться? Вдохновение берем из коробок.",
-      imageUrl:
-        "https://cdn.poehali.dev/files/6e41657f-0d26-4ced-a0fa-65ce9894fbf5.png",
-    },
-    {
-      icon: Briefcase,
-      title: "Бизнес-Кот",
-      description:
-        "Мастер переговоров и ночных пробежек по квартире. Инвестируем в кошачий корм и игрушки.",
-      imageUrl:
-        "https://cdn.poehali.dev/files/36a26caf-8f2c-4f56-860d-c58f4a97cc44.png",
-    },
-    {
-      icon: ChefHat,
-      title: "Кот-Шеф",
-      description:
-        "Специализируемся на блюдах из рыбы. Главное правило - сначала пробую я, потом гости.",
-      imageUrl:
-        "https://cdn.poehali.dev/files/38e1edae-2c03-486a-b0f7-b4493d15353f.png",
-    },
-    {
-      icon: Camera,
-      title: "Кот-Фотограф",
-      description:
-        "Лучшие ракурсы - с высоты холодильника. Портфолио состоит из селфи и случайных лап в кадре.",
-      imageUrl:
-        "https://cdn.poehali.dev/files/abf974eb-e012-422a-a3bf-f30182fff5d4.png",
-    },
-    {
-      icon: Stethoscope,
-      title: "Кот-Доктор",
-      description:
-        "Лечим мурчанием и топтанием. Дополнительная услуга - ночное наблюдение у кровати.",
-      imageUrl:
-        "https://cdn.poehali.dev/files/03e06680-2c73-46d7-aa73-cf2f00231110.png",
-    },
-  ];
+/**
+ * Данные о профессиях котов
+ */
+export const catProfessions = [
+  {
+    icon: Coffee,
+    title: "Котэ-Бариста",
+    description:
+      "Дизайн дизайном, а кушац по расписанию. Пончики и кофе - наша специальность!",
+    imageUrl:
+      "https://cdn.poehali.dev/files/e7ddc298-3324-4230-80c0-7bfead6bd9e7.png",
+  },
+  {
+    icon: Code,
+    title: "Кот-Программист",
+    description:
+      "Делаем код, который работает... иногда. Спим на клавиатуре для повышения производительности.",
+    imageUrl: "https://i.imgur.com/P0KLjsE.jpg",
+  },
+  {
+    icon: Brush,
+    title: "Кот-Дизайнер",
+    description:
+      "Все, что я делаю - копирую. Как еще мне учиться? Вдохновение берем из коробок.",
+    imageUrl:
+      "https://cdn.poehali.dev/files/6e41657f-0d26-4ced-a0fa-65ce9894fbf5.png",
+  },
+  {
+    icon: Briefcase,
+    title: "Бизнес-Кот",
+    description:
+      "Мастер переговоров и ночных пробежек по квартире. Инвестируем в кошачий корм и игрушки.",
+    imageUrl:
+      "https://cdn.poehali.dev/files/36a26caf-8f2c-4f56-860d-c58f4a97cc44.png",
+  },
+  {
+    icon: ChefHat,
+    title: "Кот-Шеф",
+    description:
+      "Специализируемся на блюдах из рыбы. Главное правило - сначала пробую я, потом гости.",
+    imageUrl:
+      "https://cdn.poehali.dev/files/38e1edae-2c03-486a-b0f7-b4493d15353f.png",
+  },
+  {
+    icon: Camera,
+    title: "Кот-Фотограф",
+    description:
+      "Лучшие ракурсы - с высоты холодильника. Портфолио состоит из селфи и случайных лап в кадре.",
+    imageUrl:
+      "https://cdn.poehali.dev/files/abf974eb-e012-422a-a3bf-f30182fff5d4.png",
+  },
+  {
+    icon: Stethoscope,
+    title: "Кот-Доктор",
+    description:
+      "Лечим мурчанием и топтанием. Дополнительная услуга - ночное наблюдение у кровати.",
+    imageUrl:
+      "https://cdn.poehali.dev/files/03e06680-2c73-46d7-aa73-cf2f00231110.png",
+  },
+];
 
+/**
+ * Секция с профессиями котов
+ */
+const ProfessionsSection = () => {
   return (
     <>
       {/* Mobile Carousel for Professions */}

@@ -1,8 +1,11 @@
 
 import { Coffee, Code } from "lucide-react";
-import { Podcast } from "./types";
+import { PodcastCardProps } from "./types";
 
-export const podcasts: Podcast[] = [
+/**
+ * Данные подкастов
+ */
+export const podcasts: PodcastCardProps[] = [
   {
     icon: Coffee,
     gradientFrom: "#D35536",

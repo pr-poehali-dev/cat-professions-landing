@@ -9,6 +9,9 @@ interface CatProfessionProps {
   imageUrl: string;
 }
 
+/**
+ * Компонент карточки профессии кота
+ */
 const CatProfession = ({
   icon: Icon,
   title,
