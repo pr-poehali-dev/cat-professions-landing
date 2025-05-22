@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { LucideIcon } from 'lucide-react';
+import React from "react";
+import { LucideIcon } from "lucide-react";
 
 /**
  * Компонент для отображения карточки с профессией кота
@@ -21,13 +20,9 @@ const CatProfession: React.FC<CatProfessionProps> = ({
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg hover:scale-105 duration-300">
       <div className="relative">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-48 object-cover"
-        />
+        <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
       </div>
-      <div className="bg-[#8B7E66] text-white p-4 relative">
+      <div className="bg-[#4A3C2A] text-white p-4 relative">
         <div className="absolute -top-10 left-4 bg-[#D35536] w-12 h-12 rounded-full flex items-center justify-center">
           <Icon className="text-white" size={24} />
         </div>

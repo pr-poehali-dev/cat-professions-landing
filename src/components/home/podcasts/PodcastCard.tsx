@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { PodcastCardProps } from "./types";
@@ -24,11 +23,7 @@ const PodcastCard: React.FC<PodcastCardProps> = ({
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md transition-transform hover:shadow-lg">
       <div className="relative">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-48 object-cover"
-        />
+        <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
         {badge && (
           <span
             className="absolute top-2 left-2 text-xs font-bold text-white px-2 py-1 rounded-full"

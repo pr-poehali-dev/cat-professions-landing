@@ -15,7 +15,7 @@ const HireSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-[#8B7E66] text-white">
+    <section className="py-16 px-4 bg-[#4A3C2A] text-white">
       <div className="container mx-auto max-w-xl">
         <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
           Хотите нанять <span className="text-[#D35536]">кота?</span>
@@ -25,14 +25,14 @@ const HireSection = () => {
         </p>
 
         <div className="space-y-6">
-          <div className="p-6 bg-[#9D8E76] rounded-lg border border-gray-700">
+          <div className="p-6 bg-[#5D4A38] rounded-lg border border-gray-700">
             <h3 className="text-xl font-bold mb-4 text-center">
               Докажите, что вы достойны быть нашим клиентом 💅🏻
             </h3>
 
             <Textarea
               placeholder="Расскажите, почему кот должен обратить на вас внимание..."
-              className="bg-gray-700 border-gray-600 mb-4"
+              className="bg-[#3A2E20] border-gray-600 mb-4"
               rows={4}
             />
 
