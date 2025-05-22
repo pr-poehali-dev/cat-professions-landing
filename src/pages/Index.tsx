@@ -99,7 +99,7 @@ const Index = () => {
       description:
         "Специализируемся на блюдах из рыбы. Главное правило - сначала пробую я, потом гости.",
       imageUrl:
-        "https://cdn.poehali.dev/files/db122655-74f9-4265-afaf-195acfefd18c.png",
+        "https://cdn.poehali.dev/files/38e1edae-2c03-486a-b0f7-b4493d15353f.png",
     },
     {
       icon: Camera,
