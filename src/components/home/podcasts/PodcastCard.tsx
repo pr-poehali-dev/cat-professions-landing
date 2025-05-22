@@ -1,4 +1,3 @@
-
 import { LucideIcon } from "lucide-react";
 import { PodcastCardProps } from "./types";
 
@@ -19,14 +18,10 @@ const PodcastCard = ({
   episodes,
 }: PodcastCardProps) => {
   return (
-    <div className="rounded-xl overflow-hidden bg-[#5D4A38] shadow-lg h-full">
+    <div className="rounded-xl overflow-hidden bg-[#2A2A2A] shadow-lg h-full">
       {/* Изображение подкаста */}
       <div className="relative">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-48 object-cover"
-        />
+        <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
         {badge && (
           <div
             className="absolute top-4 left-4 px-3 py-1 rounded-full text-white text-sm font-medium"
@@ -64,15 +59,17 @@ const PodcastCard = ({
           <div className="flex justify-between items-center py-2 px-1 border-b border-gray-700 mb-2">
             <h4 className="text-white font-medium">Последние выпуски</h4>
           </div>
-          
+
           <div className="space-y-2">
             {episodes?.map((episode, index) => (
               <div
                 key={index}
-                className="bg-[#4A3C2A] hover:bg-[#5A4C3A] transition-colors p-3 rounded-md flex justify-between cursor-pointer"
+                className="bg-[#222222] hover:bg-[#333333] transition-colors p-3 rounded-md flex justify-between cursor-pointer"
               >
                 <p className="text-white text-sm">{episode.title}</p>
-                <span className="text-gray-400 text-sm">{episode.duration}</span>
+                <span className="text-gray-400 text-sm">
+                  {episode.duration}
+                </span>
               </div>
             ))}
           </div>

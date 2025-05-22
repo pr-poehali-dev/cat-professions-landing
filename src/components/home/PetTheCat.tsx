@@ -107,17 +107,7 @@ const PetTheCat = () => {
               </p>
             </div>
 
-            <Button
-              onClick={petTheCat}
-              className={`px-6 py-3 ${
-                petCount >= 15
-                  ? "bg-gray-500 cursor-not-allowed"
-                  : "bg-[#D35536] hover:bg-[#B73D23]"
-              }`}
-              disabled={petCount >= 15}
-            >
-              {petCount >= 15 ? "Кот отдыхает..." : "Погладить кота"}
-            </Button>
+            {/* Убрана кнопка "Погладить кота" */}
           </div>
 
           <div className="mt-6 text-center">
