@@ -34,7 +34,7 @@ const Header = () => {
             Главная
           </button>
           <button
-            onClick={() => scrollToSection("professions")}
+            onClick={() => scrollToSection("why-cats")}
             className="text-white hover:text-[#D35536] transition-colors text-sm"
           >
             Преимущества
@@ -106,7 +106,7 @@ const Header = () => {
                   Главная
                 </button>
                 <button
-                  onClick={() => scrollToSection("professions")}
+                  onClick={() => scrollToSection("why-cats")}
                   className="block w-full text-left px-4 py-3 text-sm text-white hover:bg-gray-800 transition-colors"
                 >
                   Преимущества

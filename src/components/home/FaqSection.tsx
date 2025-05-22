@@ -77,15 +77,21 @@ const FaqSection = () => {
                 className="flex items-center justify-between p-4 cursor-pointer"
                 onClick={() => toggleFaq(index)}
               >
-                <h3 className="font-bold text-gray-900">{item.question}</h3>
-                <span className="text-[#D35536]">
+                <h3 className="font-bold text-gray-900 text-left">
+                  {item.question}
+                </h3>
+                <span className="text-[#D35536] flex-shrink-0">
                   {item.isOpen ? <ChevronUp /> : <ChevronDown />}
                 </span>
               </div>
               {item.isOpen && (
                 <div className="p-4 bg-white border-t border-gray-200">
-                  <p className="italic text-gray-700 mb-2">"{item.answer}"</p>
-                  <p className="text-sm text-gray-500">— {item.author}</p>
+                  <p className="italic text-gray-700 mb-2 text-left">
+                    "{item.answer}"
+                  </p>
+                  <p className="text-sm text-gray-500 text-left">
+                    — {item.author}
+                  </p>
                 </div>
               )}
             </div>

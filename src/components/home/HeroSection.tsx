@@ -4,9 +4,17 @@ import { Button } from "@/components/ui/button";
  * Герой-секция главной страницы
  */
 const HeroSection = () => {
+  // Функция для плавного скролла к секции профессионалов
+  const scrollToProfessionals = () => {
+    const element = document.getElementById("professions");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
-      className="relative overflow-hidden bg-[#121212] text-white pt-8"
+      className="relative overflow-hidden bg-[#121212] text-white pt-16"
       id="hero"
     >
       <div className="absolute inset-0 opacity-15">
@@ -22,7 +30,10 @@ const HeroSection = () => {
             <br />
             <span className="italic text-[#D35536]">Мяу.</span>
           </p>
-          <Button className="bg-[#D35536] hover:bg-[#B73D23] text-white">
+          <Button
+            className="bg-[#D35536] hover:bg-[#B73D23] text-white"
+            onClick={scrollToProfessionals}
+          >
             Познакомиться с нашими котами
           </Button>
         </div>
