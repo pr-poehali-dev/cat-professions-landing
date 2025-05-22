@@ -44,9 +44,10 @@ const FaqSection = () => {
   ]);
 
   const toggleFaq = (index: number) => {
-    setFaqItems(faqItems.map((item, i) => 
-      i === index ? { ...item, isOpen: !item.isOpen } : item
-    ));
+    setFaqItems(faqItems.map((item, i) => ({
+      ...item,
+      isOpen: i === index ? !item.isOpen : item.isOpen
+    })));
   };
 
   return (
@@ -62,7 +63,10 @@ const FaqSection = () => {
         
         <div className="max-w-3xl mx-auto space-y-4">
           {faqItems.map((item, index) => (
-            <div key={index} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <div 
+              key={index} 
+              className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+            >
               <div 
                 className="p-4 bg-[#F5F0E1] flex items-center justify-between cursor-pointer"
                 onClick={() => toggleFaq(index)}

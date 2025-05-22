@@ -1,6 +1,6 @@
 
-import { LucideIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { LucideIcon } from "lucide-react";
 
 interface CatProfessionProps {
   icon: LucideIcon;
@@ -9,11 +9,11 @@ interface CatProfessionProps {
   imageUrl: string;
 }
 
-const CatProfession = ({ 
-  icon: Icon, 
-  title, 
-  description, 
-  imageUrl 
+const CatProfession = ({
+  icon: Icon,
+  title,
+  description,
+  imageUrl,
 }: CatProfessionProps) => {
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
