@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface FaqItem {
   question: string;
@@ -58,8 +58,8 @@ const FaqSection = () => {
 
   return (
     <section className="py-16 px-4 bg-white text-black" id="faq">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold font-montserrat mb-3 text-center">
+      <div className="container mx-auto max-w-3xl">
+        <h2 className="text-4xl font-bold font-montserrat mb-3 text-center">
           <span className="text-[#D35536]">Котоленький</span> FAQ
         </h2>
         <p className="text-center mb-10 text-gray-600 max-w-2xl mx-auto">
@@ -67,19 +67,19 @@ const FaqSection = () => {
           помните: у кота просто был тяжелый день.
         </p>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="space-y-4">
           {faqItems.map((item, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+              className="bg-[#F5F2E8] rounded-md overflow-hidden"
             >
               <div
-                className="p-4 bg-[#F5F2E8] flex items-center justify-between cursor-pointer"
+                className="flex items-center justify-between p-4 cursor-pointer"
                 onClick={() => toggleFaq(index)}
               >
                 <h3 className="font-bold text-gray-900">{item.question}</h3>
                 <span className="text-[#D35536]">
-                  {item.isOpen ? "▼" : "▲"}
+                  {item.isOpen ? <ChevronUp /> : <ChevronDown />}
                 </span>
               </div>
               {item.isOpen && (
