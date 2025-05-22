@@ -20,6 +20,8 @@ import {
   Stethoscope,
   User,
 } from "lucide-react";
+import PodcastSection from "@/components/home/PodcastSection";
+import FaqSection from "@/components/home/FaqSection";
 
 const CatProfession = ({
   icon: Icon,
@@ -261,7 +263,7 @@ const Index = () => {
             </div>
 
             <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+              <span className="absolute топ-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
                 Дизайн
               </span>
               <h3 className="text-xl font-bold mb-2">КотоШоп</h3>
@@ -279,7 +281,7 @@ const Index = () => {
             </div>
 
             <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+              <span className="absolute топ-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
                 Кулинария
               </span>
               <h3 className="text-xl font-bold mb-2">Рыбоскоп</h3>
@@ -297,7 +299,7 @@ const Index = () => {
             </div>
 
             <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+              <span className="absolute топ-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
                 Медицина
               </span>
               <h3 className="text-xl font-bold mb-2">Мурчетерапия</h3>
@@ -315,7 +317,7 @@ const Index = () => {
             </div>
 
             <div className="bg-[#F5F0E1] p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-              <span className="absolute top-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
+              <span className="absolute топ-0 right-0 bg-[#D35536] text-white px-3 py-1 text-xs font-bold">
                 Фотография
               </span>
               <h3 className="text-xl font-bold mb-2">Лапофокус</h3>
@@ -332,18 +334,14 @@ const Index = () => {
               <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-[#D35536] opacity-10 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
             </div>
           </div>
-
-          <div className="mt-12 text-center">
-            <Button className="bg-[#D35536] hover:bg-[#B73D23]">
-              Загрузить больше котонимов
-            </Button>
-            <p className="mt-4 text-sm text-gray-500 italic">
-              * Все термины одобрены Международной Ассоциацией Профессиональных
-              Котов (МАПК)
-            </p>
-          </div>
         </div>
       </section>
+
+      {/* Подкасты от котов */}
+      <PodcastSection />
+
+      {/* FAQ раздел */}
+      <FaqSection />
 
       {/* Hire a Cat Form */}
       <section className="py-16 px-4 bg-[#1A1A1A] text-white">
